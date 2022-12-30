@@ -51,7 +51,7 @@ module.exports = merge(sharedConfig, {
         const body = readFileSync(path);
         const sha256  = createHash('SHA256');
 
-        md5.update(body);
+        sha256.update(body);
 
         return {
           revision: sha256.digest('hex'),
