@@ -4,7 +4,7 @@ const os = require('os');
 const throng = require('throng');
 const dotenv = require('dotenv');
 const express = require('express');
-const http = require('http');
+const https = require('https');
 const redis = require('redis');
 const pg = require('pg');
 const log = require('npmlog');
@@ -150,7 +150,7 @@ const startWorker = async (workerId) => {
   app.set('trust proxy', process.env.TRUSTED_PROXY_IP ? process.env.TRUSTED_PROXY_IP.split(/(?:\s*,\s*|\s+)/) : 'loopback,uniquelocal');
 
   const pgPool = new pg.Pool(Object.assign(pgConfigs[env], dbUrlToConfig(process.env.DATABASE_URL)));
-  const server = http.createServer(app);
+  const server = https.createServer(app);
   const redisNamespace = process.env.REDIS_NAMESPACE || null;
 
   const redisParams = {
@@ -1270,7 +1270,7 @@ const attachServerWithConfig = (server, onSuccess) => {
  * @param {function(Error=): void} onSuccess
  */
 const onPortAvailable = onSuccess => {
-  const testServer = http.createServer();
+  const testServer = https.createServer();
 
   testServer.once('error', err => {
     onSuccess(err);
