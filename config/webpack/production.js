@@ -49,12 +49,12 @@ module.exports = merge(sharedConfig, {
       additionalManifestEntries: ['1f602.svg', 'sheet_13.png'].map((filename) => {
         const path = resolve(root, 'public', 'emoji', filename);
         const body = readFileSync(path);
-        const md5  = createHash('md5');
+        const sha256  = createHash('SHA256');
 
         md5.update(body);
 
         return {
-          revision: md5.digest('hex'),
+          revision: sha256.digest('hex'),
           url: `/emoji/${filename}`,
         };
       }),
