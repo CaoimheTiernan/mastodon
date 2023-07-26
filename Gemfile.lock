@@ -490,9 +490,9 @@ GEM
       activesupport (>= 3.0.0)
     raabro (1.4.0)
     racc (1.6.1)
-    rack (2.2.4)
-    rack-attack (6.6.1)
-      rack (>= 1.0, < 3)
+    rack (2.2.7)
+    rack-attack (6.7.0)
+      rack (>= 1.0, < 4)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-oauth2 (1.19.0)
@@ -833,7 +833,7 @@ DEPENDENCIES
   puma (~> 5.6)
   pundit (~> 2.3)
   rack (~> 2.2.4)
-  rack-attack (~> 6.6)
+  rack-attack (~> 6.7, >= 6.7.0)
   rack-cors (~> 1.1)
   rack-test (~> 2.0)
   rails (~> 6.1.7)
@@ -882,4 +882,4 @@ RUBY VERSION
    ruby 3.0.4p208
 
 BUNDLED WITH
-   2.2.33
+   2.1.4
