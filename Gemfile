@@ -7,7 +7,7 @@ gem 'pkg-config', '~> 1.5'
 gem 'rexml', '~> 3.2'
 
 gem 'puma', '~> 5.6'
-gem 'rails', '~> 6.1.7'
+gem 'rails', '~> 7.1.0'
 gem 'sprockets', '~> 3.7.2'
 gem 'thor', '~> 1.2'
 gem 'rack', '~> 2.2.4'
@@ -24,14 +24,14 @@ gem 'fog-openstack', '~> 0.3', require: false
 gem 'kt-paperclip', '~> 7.1'
 gem 'blurhash', '~> 0.1'
 
-gem 'active_model_serializers', '~> 0.10'
+gem 'active_model_serializers', '~> 0.10', '>= 0.10.14'
 gem 'addressable', '~> 2.8'
 gem 'bootsnap', '~> 1.15.0', require: false
 gem 'browser'
 gem 'charlock_holmes', '~> 0.7.7'
 gem 'chewy', '~> 7.2'
-gem 'devise', '~> 4.8'
-gem 'devise-two-factor', '~> 4.0'
+gem 'devise', '~> 4.9', '>= 4.9.0'
+gem 'devise-two-factor', '~> 5.0', '>= 5.0.0'
 
 group :pam_authentication, optional: true do
   gem 'devise_pam_authenticatable2', '~> 9.2'
@@ -42,11 +42,11 @@ gem 'omniauth-cas', '~> 2.0'
 gem 'omniauth-saml', '~> 1.10'
 gem 'gitlab-omniauth-openid-connect', '~>0.10.0', require: 'omniauth_openid_connect'
 gem 'omniauth', '~> 1.9'
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.0'
 
 gem 'color_diff', '~> 0.1'
 gem 'discard', '~> 1.2'
-gem 'doorkeeper', '~> 5.6'
+gem 'doorkeeper', '~> 5.6', '>= 5.6.3'
 gem 'ed25519', '~> 1.3'
 gem 'fast_blank', '~> 1.0'
 gem 'fastimage'
@@ -71,8 +71,8 @@ gem 'pundit', '~> 2.3'
 gem 'premailer-rails'
 gem 'rack-attack', '~> 6.6'
 gem 'rack-cors', '~> 1.1', require: 'rack/cors'
-gem 'rails-i18n', '~> 6.0'
-gem 'rails-settings-cached', '~> 0.6'
+gem 'rails-i18n', '~> 7.0', '>= 7.0.1'
+gem 'rails-settings-cached', '~> 2.8', '>= 2.8.3'
 gem 'redcarpet', '~> 3.5'
 gem 'redis', '~> 4.5', require: ['redis', 'redis/connection/hiredis']
 gem 'mario-redis-lock', '~> 1.2', require: 'redis_lock'
@@ -85,14 +85,14 @@ gem 'sidekiq-scheduler', '~> 4.0'
 gem 'sidekiq-unique-jobs', '~> 7.1'
 gem 'sidekiq-bulk', '~> 0.2.0'
 gem 'simple-navigation', '~> 4.4'
-gem 'simple_form', '~> 5.1'
+gem 'simple_form', '~> 5.2', '>= 5.2.0'
 gem 'sprockets-rails', '~> 3.4', require: 'sprockets/railtie'
 gem 'stoplight', '~> 3.0.1'
 gem 'strong_migrations', '~> 0.7'
 gem 'tty-prompt', '~> 0.23', require: false
 gem 'twitter-text', '~> 3.1.0'
 gem 'tzinfo-data', '~> 1.2022'
-gem 'webpacker', '~> 5.4'
+gem 'webpacker', '~> 5.4', '>= 5.4.4'
 gem 'webpush', github: 'ClearlyClaire/webpush', ref: 'f14a4d52e201128b1b00245d11b6de80d6cfdcd9'
 gem 'webauthn', '~> 2.5'
 
@@ -106,7 +106,7 @@ group :development, :test do
   gem 'i18n-tasks', '~> 1.0', require: false
   gem 'pry-byebug', '~> 3.10'
   gem 'pry-rails', '~> 0.3'
-  gem 'rspec-rails', '~> 5.1'
+  gem 'rspec-rails', '~> 6.0', '>= 6.0.0'
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
@@ -152,7 +152,7 @@ group :development do
 end
 
 group :production do
-  gem 'lograge', '~> 0.12'
+  gem 'lograge', '~> 0.13', '>= 0.13.0'
 end
 
 gem 'concurrent-ruby', require: false
