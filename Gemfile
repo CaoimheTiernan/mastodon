@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '>= 2.7.0', '< 3.1.0'
 
 gem 'pkg-config', '~> 1.5'
-gem 'rexml', '~> 3.2'
+gem 'rexml', '~> 3.3', '>= 3.3.9'
 
 gem 'puma', '~> 5.6'
 gem 'rails', '~> 6.1.7'
@@ -110,7 +110,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
-  gem 'rubocop', require: false
+  gem 'rubocop', '>= 1.66.0', require: false
 end
 
 group :production, :test do
